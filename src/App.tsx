@@ -11,6 +11,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import CharacterInfo from './components/CharacterInfo.tsx';
+import { Typography } from "@mui/material";
+import NotFound from "./components/404.tsx";
 
 function App() {
   const { loading, error, data } = useQuery<Characters>(GetAllCharacters);
@@ -18,6 +20,7 @@ function App() {
   if (loading)
     return (
       <div className="loading">
+        <Typography variant="h3" component="h3">Loading...</Typography>
         <Lottie animationData={ricky} />
       </div>
     );
@@ -40,6 +43,10 @@ function App() {
     {
       path: "character/:characterId",
       element: <CharacterInfo />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
     },
   ]);
 
