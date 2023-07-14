@@ -19,7 +19,6 @@ export default function Cards(props: ResultCharacters) {
                     display: "flex",
                     flexDirection: "column",
                 }}
-            // onClick={() => selected(id)}
             >
                 <CardMedia
                     component="div"
@@ -37,10 +36,6 @@ export default function Cards(props: ResultCharacters) {
                         {status} - {species}
                     </Typography>
                 </CardContent>
-                <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
-                </CardActions>
             </Card>
         </Link>
     );

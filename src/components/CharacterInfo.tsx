@@ -4,16 +4,26 @@ import { useQuery } from '@apollo/client';
 import Lottie from "lottie-react";
 import ricky from "../assets/jsons/animation.json";
 import { useParams } from "react-router-dom";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import { useNavigate } from 'react-router-dom';
+import List from '@mui/material/List';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import Face6Icon from '@mui/icons-material/Face6';
+import Man2Icon from '@mui/icons-material/Man2';
+import AnnouncementIcon from '@mui/icons-material/Announcement';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import ListItems from "./ListItems";
+import Button from '@mui/material/Button';
 
 function CharacterInfo() {
-    let {characterId} = useParams()
-    console.log(characterId);
-    
+    let { characterId } = useParams()
+    const navigate = useNavigate();
+
     const { data, loading, error } = useQuery<CharacterByID>(
         GetCharacterById,
         { variables: { id: characterId } }
     );
-    console.log(data);
 
     if (loading)
         return (
@@ -22,12 +32,37 @@ function CharacterInfo() {
             </div>
         );
 
-    if (error) return <div>{error.message}</div>;
+    if (error || !data) return <div>{error?.message}</div>;
 
-    //   const { created, gender, image, name, species, status } = data.character;
+    const { created, gender, image, name, species, status } = data.character;
 
     return (
-        <div>CharacterInfo</div>
+        <div>
+            <Container sx={{ py: 8 }} maxWidth="md">
+                <Button variant="outlined" onClick={() => navigate(-1)}>Back</Button>
+                <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                    <div className="border">
+                        <div className="frame">
+                            <img src={image} alt="character-image" className="image" />
+                        </div>
+                    </div>
+
+                    <List
+                        sx={{
+                            width: '100%',
+                            maxWidth: 360,
+                            bgcolor: 'background.paper',
+                        }}
+                    >
+                        <ListItems icon={<AssignmentIndIcon />} primary={name} />
+                        <ListItems icon={<Face6Icon />} primary={gender} />
+                        <ListItems icon={<Man2Icon />} primary={species} />
+                        <ListItems icon={<AnnouncementIcon />} primary={status} />
+                        <ListItems icon={<CalendarMonthIcon />} primary={created} />
+                    </List>
+                </Box>
+            </Container>
+        </div>
     )
 }
 

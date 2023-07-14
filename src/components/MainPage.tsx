@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -14,7 +14,6 @@ interface Props {
 }
 
 function MainPage({ data }: Props) {
-  // const [selected, setSelected] = useState<string | null>(null);
   return (
     <ThemeProvider theme={defaultTheme}>
       <main>
