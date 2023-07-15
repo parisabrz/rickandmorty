@@ -6,7 +6,7 @@
 Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's nighttime programming block Adult Swim.
 
 # Demo Link
-Access to this site at [https://rickandmorty-mocha-five.vercel.app/](https://rickandmorty-liard-ten.vercel.app/)
+Access to this site at https://rickandmorty-liard-ten.vercel.app
 
 
 # Table Of Content
