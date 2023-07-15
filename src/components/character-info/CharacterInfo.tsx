@@ -42,7 +42,7 @@ function CharacterInfo() {
     return (
         <div>
             <Container sx={{ py: 8 }} maxWidth="md">
-                <Button variant="outlined" onClick={() => navigate(-1)}>Back</Button>
+                <Button style={{marginBottom: '20px'}} variant="outlined" onClick={() => navigate(-1)}>Back</Button>
                 <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
                     <div className="border">
                         <div className="frame">

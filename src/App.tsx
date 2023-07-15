@@ -1,7 +1,7 @@
 
 import { useQuery } from "@apollo/client";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect  } from "react";
+import { useEffect } from "react";
 import Lottie from "lottie-react";
 import { Typography } from "@mui/material";
 import {
@@ -27,9 +27,9 @@ function App() {
   const { loading, error, data } = useQuery<Characters>(GetAllCharacters);
 
   useEffect(() => {
-    if(data) dispatch(getData(data))
+    if (data) dispatch(getData(data))
   }, [data])
-  
+
   if (loading)
     return (
       <div className="loading">
@@ -46,12 +46,12 @@ function App() {
       Component() {
         return <div>
           <header>
-            <img src={logo} alt="logo" />
+              <img className="logo-image" src={logo} alt="logo" />
           </header>
           {CharacterLists && <MainPage data={CharacterLists} />}
           {error && <Stack sx={{ width: '70%', marginTop: '30px' }} spacing={2}>
-                <Alert severity="error">{error.message}</Alert>
-            </Stack>}
+            <Alert severity="error">{error.message}</Alert>
+          </Stack>}
         </div>;
       },
     },

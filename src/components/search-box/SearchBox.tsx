@@ -21,7 +21,7 @@ function SearchBox() {
     const dispatch = useDispatch();
 
     const [searchText, setSearchText] = useState<string>('')
-    const { loading, error, data } = useQuery<Characters>(GetCharactersByName, { variables: { name: searchText } });
+    const { loading, error, data } = useQuery<Characters>(GetCharactersByName, { variables: { name: searchText} });
 
     const handleClickBtn = () => {
         if (data) dispatch(getData(data))
@@ -38,7 +38,9 @@ function SearchBox() {
             }}
         >
             <Paper
+            className='search-box'
                 sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 500 }}
+                
             >
                 <InputBase
                     sx={{ ml: 1, flex: 1 }}
@@ -46,10 +48,8 @@ function SearchBox() {
                     inputProps={{ 'aria-label': 'search character' }}
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                            handleClickBtn();
-                        }
+                    onKeyDown={(e)=>     {if(e.key === 'Enter') {
+                        handleClickBtn();   }     
                     }}
                 />
                 <IconButton onClick={handleClickBtn} type="button" sx={{ p: '10px' }} aria-label="search">
