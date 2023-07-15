@@ -40,7 +40,7 @@ Access to this site at https://rickandmorty-mocha-five.vercel.app/
 # Setup
 > clone the app and do this step by step:
 - open **Terminal** and type **npm install**
-- after instalation type **npm run dev** to see the app on port
+- after installation type **npm run dev** to see the app on port
 - open the port on browser
 enjoy!
 
