@@ -22,9 +22,20 @@ export const GetCharacterById = gql`
       species
       gender
       created
-      location {
-        name
-      }
     }
+  }
+`;
+
+export const GetCharactersByName = gql`
+query ($name: String){
+    characters ( filter: {name: $name}){
+      results {
+        id
+        name
+        image
+        status
+        species
+      },
+    },
   }
 `;

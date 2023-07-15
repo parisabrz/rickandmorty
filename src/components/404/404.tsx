@@ -3,8 +3,9 @@ import Container from "@mui/material/Container";
 import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+
 import Lottie from "lottie-react";
-import notFoundJson from '../assets/jsons/404.json';
+import notFoundJson from '../../assets/jsons/404.json';
 import { useNavigate } from 'react-router-dom';
 
 function NotFound() {

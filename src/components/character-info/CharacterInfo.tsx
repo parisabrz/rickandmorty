@@ -1,20 +1,23 @@
-import { GetCharacterById } from "../graphql/queries"
-import { CharacterByID } from './type';
+import { GetCharacterById } from "../../graphql/queries"
+import { CharacterByID } from '../type';
 import { useQuery } from '@apollo/client';
-import Lottie from "lottie-react";
-import ricky from "../assets/jsons/animation.json";
+import { useNavigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
+import Lottie from "lottie-react";
+
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { useNavigate } from 'react-router-dom';
 import List from '@mui/material/List';
+import Button from '@mui/material/Button';
+
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import Face6Icon from '@mui/icons-material/Face6';
 import Man2Icon from '@mui/icons-material/Man2';
 import AnnouncementIcon from '@mui/icons-material/Announcement';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import ListItems from "./ListItems";
-import Button from '@mui/material/Button';
+
+import ricky from "../../assets/jsons/animation.json";
+import ListItems from "../list-items/ListItems";
 
 function CharacterInfo() {
     let { characterId } = useParams()

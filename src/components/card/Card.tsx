@@ -3,8 +3,9 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { ResultCharacters } from './type';
+
 import { Link } from "react-router-dom";
+import { ResultCharacters } from '../type';
 
 export default function Cards(props: ResultCharacters) {
     const { id, image, name, status, species } = props;

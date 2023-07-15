@@ -1,22 +1,33 @@
 
-import logo from "./assets/img/rickmorty.png";
 import { useQuery } from "@apollo/client";
-import { GetAllCharacters } from "./graphql/queries";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect  } from "react";
 import Lottie from "lottie-react";
-import ricky from "./assets/jsons/animation.json";
-import MainPage from "./components/MainPage";
-import { Characters } from "./components/type";
+import { Typography } from "@mui/material";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import CharacterInfo from './components/CharacterInfo.tsx';
-import { Typography } from "@mui/material";
-import NotFound from "./components/404.tsx";
+
+import { GetAllCharacters } from "./graphql/queries";
+import ricky from "./assets/jsons/animation.json";
+import MainPage from "./components/main-page/MainPage.tsx";
+import { Characters } from "./components/type";
+import CharacterInfo from './components/character-info/CharacterInfo.tsx';
+import NotFound from "./components/404/404.tsx";
+import logo from "./assets/img/rickmorty.png";
+import { getData } from "./app/slice.ts";
+import { RootState } from "./app/store.ts";
 
 function App() {
+  const dispatch = useDispatch();
+  const CharacterLists = useSelector((state: RootState) => state.characterData.charactersData)
   const { loading, error, data } = useQuery<Characters>(GetAllCharacters);
 
+  useEffect(() => {
+    if(data) dispatch(getData(data))
+  }, [data])
+  
   if (loading)
     return (
       <div className="loading">
@@ -27,6 +38,7 @@ function App() {
 
   if (error) return <div>{error.message}</div>;
 
+  // define router - react-router-dom v6
   let router = createBrowserRouter([
     {
       path: "/",
@@ -36,7 +48,7 @@ function App() {
           <header>
             <img src={logo} alt="logo" />
           </header>
-          <MainPage data={data} />
+          {CharacterLists && <MainPage data={CharacterLists} />}
         </div>;
       },
     },

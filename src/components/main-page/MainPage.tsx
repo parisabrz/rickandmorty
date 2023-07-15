@@ -4,13 +4,15 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Characters, ResultCharacters } from "./type";
-import Cards from "./Card";
+
+import { Characters, CharactersClass, ResultCharacters } from "../type";
+import Cards from "../card/Card";
+import SearchBox from "../search-box/SearchBox";
 
 const defaultTheme = createTheme();
 
 interface Props {
-  data: Characters | undefined;
+  data: Characters;
 }
 
 function MainPage({ data }: Props) {
@@ -37,6 +39,8 @@ function MainPage({ data }: Props) {
             </Typography>
           </Container>
         </Box>
+        <SearchBox/>
+        {/* Character Lists */}
         <Container sx={{ py: 8 }} maxWidth="md">
           <Grid container spacing={4}>
             {data?.characters?.results.map((character: ResultCharacters) => (
@@ -47,6 +51,7 @@ function MainPage({ data }: Props) {
           </Grid>
         </Container>
       </main>
+      {/* footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography variant="body2" color="text.secondary" align="center">
           {"Copyright © "}
