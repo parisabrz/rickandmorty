@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import { Characters, CharactersClass, ResultCharacters } from "../type";
+import { Characters, ResultCharacters } from "../type";
 import Cards from "../card/Card";
 import SearchBox from "../search-box/SearchBox";
 
