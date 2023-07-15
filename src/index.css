@@ -79,7 +79,7 @@ a {
   background-position: center center;
 }
 
-@media (min-width:320px) and (max-width: 390px){
+@media (min-width:320px) and (max-width: 1284px){
   .search-box{
     width: 300px !important;
   }
