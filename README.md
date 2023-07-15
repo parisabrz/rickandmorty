@@ -33,9 +33,9 @@ Access to this site at https://rickandmorty-mocha-five.vercel.app/
 
 
 # Technologies
-| React | Vite | Typescript | Graphql | Material UI | React-Router-Dom |
-| ------ | ------ | ------ | ------ | ------ | ------ |
-| ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/react.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/vite.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/typescript.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/graphql.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/materialui.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/react-router.svg?raw=true) |
+| React | Vite | Typescript | Graphql | Material UI | React-Router-Dom | Redux |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/react.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/vite.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/typescript.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/graphql.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/materialui.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/react-router.svg?raw=true) | ![alt text](https://github.com/parisabrz/rickandmorty/blob/main/src/assets/img/redux.svg?raw=true) |
   
 # Setup
 > clone the app and do this step by step:
