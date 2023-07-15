@@ -8,6 +8,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 
 import { GetAllCharacters } from "./graphql/queries";
 import ricky from "./assets/jsons/animation.json";
@@ -36,8 +38,6 @@ function App() {
       </div>
     );
 
-  if (error) return <div>{error.message}</div>;
-
   // define router - react-router-dom v6
   let router = createBrowserRouter([
     {
@@ -49,6 +49,9 @@ function App() {
             <img src={logo} alt="logo" />
           </header>
           {CharacterLists && <MainPage data={CharacterLists} />}
+          {error && <Stack sx={{ width: '70%', marginTop: '30px' }} spacing={2}>
+                <Alert severity="error">{error.message}</Alert>
+            </Stack>}
         </div>;
       },
     },
