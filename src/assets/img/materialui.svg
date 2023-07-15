@@ -1,10 +1,13 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg fill="#4f94de" width="800px" height="800px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier">
-<title>Material-UI icon</title>
-<path d="M0 2.475v10.39l3 1.733V7.67l6 3.465 6-3.465v3.465l-6 3.463v3.464l6 3.463 9-5.195V9.402l-3 1.733v3.463l-6 3.464-3-1.732 6-3.465V2.475L9 7.67 0 2.475zm24 0l-3 1.73V7.67l3-1.732V2.474Z"/>
-</g>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.1 51.32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f94de;
+      }
+    </style>
+  </defs>
+  <g id="SVGRepoiconCarrier">
+    <path id="Path" class="cls-1" d="M0,0V27.99l7.64,4.67V14l15.27,9.33,15.27-9.33v9.33l-15.27,9.33v9.33l15.27,9.33,22.91-14V18.66l-7.64,4.67v9.33l-15.27,9.33-7.64-4.67,15.27-9.33V0L22.91,14,0,0ZM61.1,0l-7.64,4.66V14l7.64-4.67V0h0Z"/>
+  </g>
+</svg>
